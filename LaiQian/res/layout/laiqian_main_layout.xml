@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaiQianMainActivity" >
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="0.0dp"
+                android:layout_weight="1.0" >
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:visibility="gone" >
+            </TabWidget>
+
+            <RadioGroup
+                android:id="@+id/main_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/base_action_bar_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/tab_community"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:layout_marginTop="2.0dp"
+                    android:layout_marginBottom="2dp"
+                    android:button="@null"
+                    android:tag="tab_community"
+                    android:drawableTop="@drawable/tab_icon_community_selector"
+                    android:text="@string/tab_community"
+                    android:textColor="@color/tab_text_color_selector"
+                    android:textSize="12dp" />
+
+                <RadioButton
+                    android:id="@+id/tab_trade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:layout_marginTop="2.0dp"
+                    android:layout_marginBottom="2dp"
+                    android:button="@null"
+                    android:tag="tab_trade"
+                    android:drawableTop="@drawable/tab_icon_trade_selector"
+                    android:text="@string/tab_trade"
+                    android:textColor="@color/tab_text_color_selector"
+                    android:textSize="12dp" />
+
+                <RadioButton
+                    android:id="@+id/tab_exerise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:button="@null"
+                    android:tag="tab_exerise"
+                    android:drawableTop="@drawable/tab_icon_exerise_selector"
+                    android:text="@string/tab_exerise"
+                    android:textColor="@color/tab_text_color_selector"
+                    android:textSize="12dp" />
+
+                <RadioButton
+                    android:id="@+id/tab_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:layout_marginTop="2.0dp"
+                    android:layout_marginBottom="2dp"
+                    android:button="@null"
+                    android:tag="tab_setting"
+                    android:drawableTop="@drawable/tab_icon_setting_selector"
+                    android:text="@string/tab_setting"
+                    android:textColor="@color/tab_text_color_selector"
+                    android:textSize="12dp" />
+            </RadioGroup>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

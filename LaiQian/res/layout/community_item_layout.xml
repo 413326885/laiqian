@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/community_item_entry"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#99dddddd" >
+
+    <ImageView
+        android:id="@+id/item_divider"
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@id/item_divider"
+        android:background="@drawable/corner_list_bg" >
+
+        <RelativeLayout
+            android:id="@+id/item_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/community_person_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/dongdong" />
+
+            <TextView
+                android:id="@+id/community_person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/community_person_pic"
+                android:alpha="0.8"
+                android:text="姓名" />
+
+            <TextView
+                android:id="@+id/community_person_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/community_person_name"
+                android:alpha="0.4"
+                android:text="LV.1"
+                android:textSize="10sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/community_publish_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/community_person_name"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/community_person_pic"
+                android:alpha="0.5"
+                android:text="几天前"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/community_divider_01"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/item_01"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0.1"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/community_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_01"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="18dp"
+            android:ellipsize="end"
+            android:minHeight="60dp"
+            android:text="这个是我的评论..." />
+
+        <ImageView
+            android:id="@+id/community_divider_02"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/community_item_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:alpha="0.1"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:id="@+id/community_item_action"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/community_divider_02"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/community_item_zhuanfa"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical|center_horizontal"
+                android:src="@drawable/ic_forward" />
+
+            <ImageButton
+                android:id="@+id/community_item_pinglun"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical|center_horizontal"
+                android:src="@drawable/ic_comment" />
+
+            <ImageButton
+                android:id="@+id/community_item_zan"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical|center_horizontal"
+                android:src="@drawable/ic_bravo" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
